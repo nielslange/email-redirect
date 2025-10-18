@@ -1,0 +1,7 @@
+# Cache files
+.phpcs.cache
+
+# Directories
+/dist/
+/node_modules/
+/vendor/

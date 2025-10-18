@@ -1,0 +1,21 @@
+# Cache files
+.phpcs.cache
+
+# Directories
+/.git/
+/.github/
+/bin/
+/dist/
+/node_modules/
+/vendor/
+
+# Dependencies
+composer.json
+composer.lock
+package.json
+pnpm-lock.yaml
+
+# Configuration files
+.editorconfig
+.gitignore
+.phpcs.xml

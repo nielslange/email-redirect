@@ -1,0 +1,15 @@
+{
+  "name": "email-redirect",
+  "version": "1.0.0",
+  "description": "Enables users to redirect emails to a custom email address instead of the original recipient.",
+  "author": "Niels Lange <niels@nielslange.de>",
+  "license": "GPL-2.0+",
+  "scripts": {
+    "phpcs": "vendor/bin/phpcs -ps . --standard=phpcs.xml --ignore=node_modules,vendor",
+    "phpcs:summary": "vendor/bin/phpcs . --standard=phpcs.xml --ignore=node_modules,vendor --report=summary",
+    "phpcs:file": "vendor/bin/phpcs --standard=phpcs.xml --ignore=node_modules,vendor",
+    "phpcbf": "vendor/bin/phpcbf . --standard=phpcs.xml --ignore=node_modules,vendor",
+    "build:zip": "bash ./bin/build.sh",
+    "release": "bash ./bin/release.sh"
+  }
+}
