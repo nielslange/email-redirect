@@ -13,6 +13,6 @@ indent_size = 4
 [*.{scss}]
 indent_style = tab
 
-[*.{md}]
+[*.{md,yml}]
 indent_style = space
 indent_size = 2
