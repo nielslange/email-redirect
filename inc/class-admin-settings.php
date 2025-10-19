@@ -22,6 +22,7 @@ class Admin_Settings {
 		add_action( 'admin_menu', [ $this, 'add_admin_menu' ] );
 		add_action( 'admin_init', [ $this, 'register_settings' ] );
 		add_action( 'admin_enqueue_scripts', [ $this, 'enqueue_admin_assets' ] );
+		add_filter( 'plugin_action_links_' . PLUGIN_BASENAME, [ $this, 'settings_link' ] );
 	}
 
 	/**
@@ -146,10 +147,10 @@ class Admin_Settings {
 		<div id="email-redirect-addresses-container">
 		<?php foreach ( $addresses as $index => $address ) : ?>
 				<div class="email-address-field" data-index="<?php echo esc_attr( $index ); ?>">
-					<input 
-						type="email" 
-						name="email_redirect_addresses[<?php echo esc_attr( $index ); ?>]" 
-						value="<?php echo esc_attr( $address ); ?>" 
+					<input
+						type="email"
+						name="email_redirect_addresses[<?php echo esc_attr( $index ); ?>]"
+						value="<?php echo esc_attr( $address ); ?>"
 						class="regular-text email-address-input"
 						placeholder="<?php esc_attr_e( 'Enter email address', 'email-redirect' ); ?>"
 					>
@@ -159,7 +160,7 @@ class Admin_Settings {
 				</div>
 			<?php endforeach; ?>
 		</div>
-		
+
 		<button type="button" id="add-email-btn" class="button button-secondary">
 			<?php esc_html_e( '+ Add Email Address', 'email-redirect' ); ?>
 		</button>
@@ -185,5 +186,22 @@ class Admin_Settings {
 			</form>
 		</div>
 			<?php
+	}
+
+	/**
+	 * Add settings link on plugin page.
+	 *
+	 * @param array $links The settings link on the plugin page.
+	 * @return array The settings link on the plugin page.
+	 */
+	public function settings_link( array $links ): array {
+		$settings_link = sprintf(
+			'<a href="%s">%s</a>',
+			esc_url( admin_url( 'options-general.php?page=email-redirect' ) ),
+			esc_html__( 'Settings', 'email-redirect' )
+		);
+		array_unshift( $links, $settings_link );
+
+		return $links;
 	}
 }

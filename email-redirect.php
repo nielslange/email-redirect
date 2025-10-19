@@ -18,6 +18,7 @@ defined( 'ABSPATH' ) || exit;
 define( 'PLUGIN_DATA', get_plugin_data( __FILE__ ) );
 define( 'PLUGIN_VERSION', PLUGIN_DATA['Version'] );
 define( 'PLUGIN_URL', plugin_dir_url( __FILE__ ) );
+define( 'PLUGIN_BASENAME', plugin_basename( __FILE__ ) );
 define( 'ADMIN_CSS_URL', PLUGIN_URL . 'assets/css/admin.min.css' );
 define( 'ADMIN_JS_URL', PLUGIN_URL . 'assets/js/admin.min.js' );
 
