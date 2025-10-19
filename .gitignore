@@ -6,8 +6,5 @@
 /node_modules/
 /vendor/
 
-# Assets files
-assets/img/email-redirect.png
-
 # OS files
 .DS_Store
