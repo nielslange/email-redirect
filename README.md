@@ -2,7 +2,7 @@
 
 ## Screenshot
 
-![Screenshot](assets/img/email-redirect.png)
+![Screenshot](./assets/img/email-redirect.png)
 
 ## Setup Commands
 
