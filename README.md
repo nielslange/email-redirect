@@ -1,6 +1,6 @@
 # Email Redirect
 
-A WordPress plugin that enables users to redirect emails to custom email addresses instead of the original recipient. This is particularly helpful during development and testing, allowing you to verify emails are sent correctly without real-world consequences—such as preventing test orders from reaching your fulfillment center or accidentally notifying customers.
+A WordPress plugin that enables users to redirect emails to custom email addresses instead of the original recipient. This is particularly helpful during development and testing, allowing you to verify emails are sent correctly without real-world consequences, such as preventing test orders from reaching your fulfillment center or accidentally notifying customers.
 
 ## Screenshot
 
