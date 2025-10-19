@@ -1,15 +1,32 @@
 {
-  "name": "email-redirect",
-  "version": "1.0.0",
-  "description": "Enables users to redirect emails to a custom email address instead of the original recipient.",
-  "author": "Niels Lange <niels@nielslange.de>",
-  "license": "GPL-2.0+",
-  "scripts": {
-    "phpcs": "vendor/bin/phpcs -ps . --standard=phpcs.xml --ignore=node_modules,vendor",
-    "phpcs:summary": "vendor/bin/phpcs . --standard=phpcs.xml --ignore=node_modules,vendor --report=summary",
-    "phpcs:file": "vendor/bin/phpcs --standard=phpcs.xml --ignore=node_modules,vendor",
-    "phpcbf": "vendor/bin/phpcbf . --standard=phpcs.xml --ignore=node_modules,vendor",
-    "build:zip": "bash ./bin/build.sh",
-    "release": "bash ./bin/release.sh"
-  }
+	"name": "email-redirect",
+	"description": "Enables users to redirect emails to a custom email address instead of the original recipient.",
+	"author": "Niels Lange <info@nielslange.de>",
+	"license": "GPL-2.0+",
+	"devDependencies": {
+		"@wordpress/prettier-config": "^4.33.0",
+		"@wordpress/scripts": "^30.26.0",
+		"@wordpress/stylelint-config": "^23.25.0",
+		"prettier": "npm:wp-prettier@^3.0.3",
+		"sass": "^1.93.0",
+		"stylelint": "^16.25.0",
+		"terser": "^5.44.0",
+		"wp-prettier": "^3.0.3"
+	},
+	"scripts": {
+		"build": "pnpm build:css && pnpm build:js",
+		"build:css": "sass assets/scss/admin.scss:assets/css/admin.min.css --style=compressed --source-map",
+		"build:js": "terser assets/js/admin.js -o assets/js/admin.min.js -c -m --source-map",
+		"build:watch": "pnpm build:css --watch",
+		"build:zip": "bash ./bin/build.sh",
+		"lint:css": "stylelint 'assets/scss/**/*.scss' --config .stylelintrc.json",
+		"lint:css:fix": "stylelint 'assets/scss/**/*.scss' --config .stylelintrc.json --fix",
+		"lint:js": "wp-scripts lint-js 'assets/js/admin.js'",
+		"lint:js:fix": "wp-scripts lint-js 'assets/js/admin.js' --fix",
+		"phpcbf": "vendor/bin/phpcbf . --standard=phpcs.xml --ignore=node_modules,vendor",
+		"phpcs": "vendor/bin/phpcs -ps . --standard=phpcs.xml --ignore=node_modules,vendor",
+		"phpcs:file": "vendor/bin/phpcs --standard=phpcs.xml --ignore=node_modules,vendor",
+		"phpcs:summary": "vendor/bin/phpcs . --standard=phpcs.xml --ignore=node_modules,vendor --report=summary",
+		"release": "bash ./bin/release.sh"
+	}
 }

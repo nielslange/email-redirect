@@ -19,3 +19,14 @@ pnpm-lock.yaml
 .editorconfig
 .gitignore
 .phpcs.xml
+
+# Linting files
+.prettierrc.json
+.stylelintrc.json
+
+# Assets files
+assets/js/admin.js
+assets/scss/admin.scss
+
+# OS files
+.DS_Store

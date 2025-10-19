@@ -5,3 +5,6 @@
 /dist/
 /node_modules/
 /vendor/
+
+# OS files
+.DS_Store
