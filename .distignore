@@ -27,6 +27,7 @@ pnpm-lock.yaml
 # Assets files
 assets/js/admin.js
 assets/scss/admin.scss
+assets/img/email-redirect.png
 
 # OS files
 .DS_Store

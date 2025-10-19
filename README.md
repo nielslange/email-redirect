@@ -1,5 +1,9 @@
 # Email Redirect
 
+## Screenshot
+
+![Screenshot](assets/img/email-redirect.png)
+
 ## Setup Commands
 
 ```bash
