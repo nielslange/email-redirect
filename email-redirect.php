@@ -6,8 +6,8 @@
  * Author: Niels Lange
  * Author URI: https://nielslange.de
  * Text Domain: email-redirect
- * License: GPL-2.0+
- * License URI: https://www.gnu.org/licenses/gpl-2.0.html
+ * License: GPL-3.0+
+ * License URI: https://www.gnu.org/licenses/gpl-3.0.html
  *
  * @package email-redirect
  */

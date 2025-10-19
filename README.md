@@ -48,3 +48,7 @@ pnpm phpcs:summary  # Show PHP coding standards summary
 ```bash
 pnpm release        # Bump version number and create distribution zip file
 ```
+
+## License
+
+This plugin is licensed under the [GNU General Public License v3.0](LICENSE).
