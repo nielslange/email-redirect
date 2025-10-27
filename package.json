@@ -28,5 +28,6 @@
 		"phpcs:file": "vendor/bin/phpcs --standard=phpcs.xml --ignore=node_modules,vendor",
 		"phpcs:summary": "vendor/bin/phpcs . --standard=phpcs.xml --ignore=node_modules,vendor --report=summary",
 		"release": "bash ./bin/release.sh"
-	}
+	},
+	"packageManager": "pnpm@10.19.0"
 }

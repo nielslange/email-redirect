@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Email Redirect
  * Description: Enables users to redirect emails to a custom email address instead of the original recipient.
- * Version: 1.0
+ * Version: 1.1
  * Author: Niels Lange
  * Author URI: https://nielslange.de
  * Text Domain: email-redirect
