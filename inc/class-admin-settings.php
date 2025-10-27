@@ -23,6 +23,20 @@ class Admin_Settings {
 		add_action( 'admin_init', [ $this, 'register_settings' ] );
 		add_action( 'admin_enqueue_scripts', [ $this, 'enqueue_admin_assets' ] );
 		add_filter( 'plugin_action_links_' . PLUGIN_BASENAME, [ $this, 'settings_link' ] );
+		add_action( 'init', [ $this, 'load_textdomain' ] );
+	}
+
+	/**
+	 * Load plugin text domain for translations
+	 *
+	 * @return void
+	 */
+	public function load_textdomain(): void {
+		load_plugin_textdomain(
+			'email-redirect',
+			false,
+			dirname( plugin_basename( __FILE__ ) ) . '/languages/'
+		);
 	}
 
 	/**
