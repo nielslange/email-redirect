@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Email Redirect
  * Description: Enables users to redirect emails to a custom email address instead of the original recipient.
- * Version: 1.1
+ * Version: 1.2
  * Author: Niels Lange
  * Author URI: https://nielslange.de
  * Text Domain: email-redirect
@@ -14,6 +14,10 @@
 
 declare( strict_types=1 );
 defined( 'ABSPATH' ) || exit;
+
+if ( ! function_exists( 'get_plugin_data' ) ) {
+	require_once ABSPATH . 'wp-admin/includes/plugin.php';
+}
 
 define( 'PLUGIN_DATA', get_plugin_data( __FILE__ ) );
 define( 'PLUGIN_VERSION', PLUGIN_DATA['Version'] );
